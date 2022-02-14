@@ -2,6 +2,13 @@
     --gradient-right: rgba(248, 70, 180, 0.301);
     --gradient-left: rgba(9, 243, 99, 0.247);
     --gradient-background: rgba(46, 13, 36, 0.93);
+    --gradient-background-right: rgba(70, 227, 248, 0);
+    --gradient-background-left: rgba(239, 243, 9, 0.13);
+    --color-showcase-header: rgba(57, 24, 61, 0.93);
+    --gradient-showcase-header-left: rgba(20, 60, 68, 0.93);
+    --btn-background: rgb(90, 40, 92);
+    --btn-background-hover: rgb(100, 50, 102);
+    --btn-outline: rgba(140, 90, 142);
 }
 
 /* BACKGROUND */
@@ -28,7 +35,7 @@ body {
     right: -10px;
     bottom: -10px;
     left: -10px;
-    background: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/601220/d6dda6493dfa4ee23d690f95b8ec4edad15b2e23.png);
+    background: url(https://d4rxt4r.github.io/saby-theme/outline.png);
     background-position: center;
     background-size: cover;
 }
@@ -46,7 +53,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/893030/b8a8d1d3edcac02b827da0e3d6a9d83e0455504a.png);
+    background: url(https://d4rxt4r.github.io/saby-theme/badge.png);
     background-position: center;
     background-size: cover;
 }
@@ -167,9 +174,32 @@ body {
 
 /* END INVERT COLORS */
 
+/* RIGHT PANEL */
+.controls-StackTemplate__rightBorder_visible {
+    border-color: var(--gradient-background);
+    border-left: 1px solid;
+}
+
+.controls-StackTemplate__rightPanel {
+    background: var(--gradient-background);
+}
+
+.sabyPage-widgets__informersWrapper-shadow::after {
+    background: unset;
+}
+
+.informers-InformersBar-informer-header_container {
+    border: 1px solid var(--btn-background);
+    background-color: var(--btn-outline);
+} 
+
+.ws-is-hover .informers-InformersBar-informer-header_container:hover {
+    background-color: var(--btn-background-hover);
+}
+
+
 /* TODO
 
-theme action panel
 add some graphics idk
 
 */
