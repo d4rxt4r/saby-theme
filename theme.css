@@ -1,13 +1,15 @@
---:root {
+:root {
     --gradient-right: rgba(248, 70, 180, 0.301);
     --gradient-left: rgba(9, 243, 99, 0.247);
     --gradient-background: rgba(46, 13, 36, 0.93);
 }
 
+/* BACKGROUND */
 body {
     background-image: url(https://d4rxt4r.github.io/saby-theme/bg.jpg) !important;
 }
 
+/* PHOTO OUTLINE */
 .person-Card_headerLogo .docview3-PhotoGallery,
 .person-Card_headerLogo .docview3-PhotoGallery__view,
 .person-Card_headerLogo .docview3-Preview {
@@ -31,10 +33,12 @@ body {
     background-size: cover;
 }
 
+/* BADGE IMG REPLACEMENT */
 .mot-Controls-Carousel__item_badge {
     display: inline-block;
     position: relative;
 }
+
 .mot-Controls-Carousel__item_badge::after {
     content: '';
     position: absolute;
@@ -51,34 +55,31 @@ body {
     display: none;
 }
 
+/* HIDDEN BREADCRUMBS */
 .controls-BreadCrumbsView {
     display: none;
 }
 
+/* HIDDEN NAVIGATION */
 .person-Card__navigation {
     display: none;
-}
-
-.controls-StackTemplate__top-area {
-    padding-top: var(--offset_l);
-}
-
-.employee-Card__header_footer {
-    margin-top: var(--offset_3xl);
-}
-
-.person-GeneralInfo__widget {
-    background: unset;
 }
 
 .person-Card__tabs {
     display: none;
 }
 
+/* SPACING FOR HEADER */
 .controls-StackTemplate__top-area {
-    background: transparent;
+    padding-top: var(--offset_l);
+    padding-bottom: 42px;
 }
 
+.employee-Card__header_footer {
+    margin-top: var(--offset_3xl);
+}
+
+/* PROFILE BADGE */
 .person-GeneralInfo__scroll .controls-Scroll-Container {
     overflow: visible;
 }
@@ -86,12 +87,8 @@ body {
 .controls-BlockLayout__block .controls-BlockLayout__block_style_1:first-child {
     position: absolute;
     right: 6px;
-    top: -94px;
+    top: -98px;
     background: unset;
-}
-
-.controls-BlockLayout__block .controls-BlockLayout__block_style_1:nth-child(2) {
-    padding-top: var(--offset_3xl);
 }
 
 .mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item'] {
@@ -101,15 +98,17 @@ body {
     padding: 0 6px 0 0;
 }
 
+.mot-Controls-Carousel__item .mot-Controls-Carousel__item_name_0 span {
+    color: #fff;
+    /* font-weight: 600; */
+}
+
+/* HIDE OTHER BADGES */
 .mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item']:not(:first-child) {
     display: none;
 }
 
-.mot-Controls-Carousel__item .mot-Controls-Carousel__item_name_0 span {
-    color: #fff;
-    font-weight: 600;
-}
-
+/* CARD BG GRADIENT */
 .controls-StackTemplate-content {
     background: radial-gradient(farthest-side at bottom right, var(--gradient-right), transparent 500px),
         radial-gradient(farthest-corner at bottom left, var(--gradient-left), transparent 600px);
@@ -118,12 +117,51 @@ body {
     background-position: center;
 }
 
+/* CARD SHADOW */
+.controls-Popup__dialog-target-container {
+    box-shadow: var(--gradient-right);
+}
+
+.controls-StackTemplate-shadow {
+    border-right: var(--border-thickness_stack) solid var(--gradient-background);
+}
+
+/* CLEARING STYLES */
+.person-GeneralInfo__widget {
+    background: unset;
+    padding-top: 0;
+}
+
+.controls-StackTemplate__top-area {
+    background: transparent;
+}
+
 .controls-background-default,
 .controls-BlockLayout,
 .controls-StackTemplate_backgroundColor,
 .controls-BlockLayout__block_style_1 {
     background: unset;
 }
+
+
+/*  INVERT COLORS */
+[data-qa="person-Card__headerName"],
+.personCard-Contact__list [class^='personCard-Contact_'],
+.personCard-Contact__list .controls-text-default,
+.personCard-Contact__list .personCard-Contact__dataContact a {
+    color: #fff
+}
+
+.ws-is-hover .personCard-Contact__columnsContainer .controls-ListView__item_highlightOnHover_default:hover,
+.ws-is-hover .controls-itemActionsV_style_default {
+    background-color: unset;
+}
+
+.ws-is-desktop-platform .person-PhoneCallLinkButton_state-main:hover {
+    color: #e3e;
+}
+
+/* END INVERT COLORS */
 
 /* TODO
 
