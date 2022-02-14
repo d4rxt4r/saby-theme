@@ -77,7 +77,7 @@ body {
 }
 
 /* SPACING FOR HEADER */
-.controls-StackTemplate__top-area {
+.employee-Card .controls-StackTemplate__top-area {
     padding-top: var(--offset_l);
     padding-bottom: 42px;
 }
@@ -95,32 +95,32 @@ body {
     pointer-events: none;
 }
 
-.controls-BlockLayout__block .controls-BlockLayout__block_style_1:first-child {
+.employee-Card .controls-BlockLayout__block .controls-BlockLayout__block_style_1:first-child {
     position: absolute;
     right: 6px;
     top: -98px;
     background: unset;
 }
 
-.mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item'] {
+.employee-Card .mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item'] {
     background-color: rgba(0, 0, 0, 0.3);
     height: 70px;
     border-radius: 3px;
-    padding: 0 6px 0 0;
+    padding: 0 12px 0 6px;
 }
 
-.mot-Controls-Carousel__item .mot-Controls-Carousel__item_name_0 span {
+.employee-Card .mot-Controls-Carousel__item .mot-Controls-Carousel__item_name_0 span {
     color: #fff;
     /* font-weight: 600; */
 }
 
 /* HIDE OTHER BADGES */
-.mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item']:not(:first-child) {
+.employee-Card .mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item']:not(:first-child) {
     display: none;
 }
 
 /* CARD BG GRADIENT */
-.controls-StackTemplate-content {
+.employee-Card .controls-StackTemplate-content {
     background: radial-gradient(farthest-side at bottom right, var(--gradient-right), transparent 500px),
         radial-gradient(farthest-corner at bottom left, var(--gradient-left), transparent 600px);
     background-color: var(--gradient-background);
@@ -143,14 +143,14 @@ body {
     padding-top: 0;
 }
 
-.controls-StackTemplate__top-area {
+.employee-Card .controls-StackTemplate__top-area {
     background: transparent;
 }
 
-.controls-background-default,
-.controls-BlockLayout,
-.controls-StackTemplate_backgroundColor,
-.controls-BlockLayout__block_style_1 {
+.employee-Card .controls-background-default,
+.employee-Card .controls-BlockLayout,
+.employee-Card .controls-StackTemplate_backgroundColor,
+.employee-Card .controls-BlockLayout__block_style_1 {
     background: unset;
 }
 
@@ -177,14 +177,14 @@ body {
 /* RIGHT PANEL */
 .controls-StackTemplate__rightBorder_visible {
     border-color: var(--gradient-background);
-    border-left: 1px solid;
+    border-left: 2px solid;
 }
 
 .controls-StackTemplate__rightPanel {
     background: var(--gradient-background);
 }
 
-.sabyPage-widgets__informersWrapper-shadow::after {
+.employee-Card .sabyPage-widgets__informersWrapper-shadow::after {
     background: unset;
 }
 
