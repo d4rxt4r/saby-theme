@@ -1,8 +1,25 @@
 body {
-  background-image: url(https://d4rxt4r.github.io/saby-theme/bg.jpg) !important;
+    background-image: url(https://d4rxt4r.github.io/saby-theme/bg.jpg) !important;
 }
 
-.docview3-Preview__image::after {
+.person-Card_headerLogo .docview3-PhotoGallery,
+.person-Card_headerLogo .docview3-PhotoGallery__view,
+.person-Card_headerLogo .docview3-Preview {
+    overflow: visible;
+}
+
+.person-Card_headerLogo .docview3-Preview {
+    display: inline-block;
+    position: relative;
+}
+
+.person-Card_headerLogo .docview3-Preview::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
     background: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/601220/d6dda6493dfa4ee23d690f95b8ec4edad15b2e23.png);
     background-position: center;
     background-size: cover;
