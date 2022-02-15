@@ -13,7 +13,7 @@
 
 /* BACKGROUND */
 body {
-    background-image: url(https://d4rxt4r.github.io/saby-theme/themes/mandalorian/bg.jpg) !important;
+    background-image: url(./img/bg.jpg) !important;
 }
 
 /* PHOTO OUTLINE */
@@ -39,7 +39,7 @@ body {
     right: -14px;
     bottom: -18px;
     left: -17px;
-    background: url(https://d4rxt4r.github.io/saby-theme/themes/mandalorian/outline.png);
+    background: url(./img/outline.png);
     background-position: center;
     background-size: cover;
 }
@@ -57,7 +57,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url(https://d4rxt4r.github.io/saby-theme/themes/mandalorian/badge.png);
+    background: url(./img/badge.png);
     background-position: center;
     background-size: cover;
 }
