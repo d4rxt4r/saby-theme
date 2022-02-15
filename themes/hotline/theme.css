@@ -1,5 +1,230 @@
 /* inspired by https://steamcommunity.com/id/RetroGod1986/ */
-@import "../../engine/base.css";
+:root {
+  --bg-img: url(./img/background.png);
+  --photo-radius: 8px;
+  --photo-outline-img: url(./img/outline.png);
+  --photo-outline-inset: -10px;
+  --display-breadcrumbs: none;
+  --display-top-nav: none;
+  --display-right-nav: hidden;
+  --display-wall: none;
+  --display-contact-info: block;
+  --display-projects: none;
+  --badge-bg-color: rgba(0, 0, 0, 0.3);
+  --badge-img: url(./img/badge.png);
+  --stack-shadow: rgba(0, 0, 0, 0.3);
+  --stack-background: #bbe9ff;
+  --font-color-primary: #fff;
+  --font-color-secondary: #eee;
+  --font-color-link: #fff;
+  --font-color-link-hover: #fff;
+}
+.employee-Card .controls-StackTemplate__top-area {
+  background: transparent;
+}
+.employee-Card .controls-background-default,
+.employee-Card .controls-BlockLayout,
+.employee-Card .controls-StackTemplate_backgroundColor,
+.employee-Card .controls-BlockLayout__block_style_1,
+.employee-Card .controls__block-layout-background,
+.employee-Card .wall-Header_sideDate,
+.employee-Card .wall-List {
+  background: unset;
+}
+.employee-Card .person-GeneralInfo__widget {
+  background: unset;
+  padding-top: 0;
+}
+.person-Card__navigation .controls-Grid__row-cell_selected-master.controls-background-master {
+  background: unset;
+}
+.ws-is-hover .controls-BaseControl_hover_enabled .controls-Grid__row_highlightOnHover_master:hover .controls-Grid__row-cell-background-hover-master,
+.ws-is-hover .controls-BaseControl_hover_enabled .controls-Grid__row_highlightOnHover_master:hover .controls-background-master {
+  background-color: unset;
+}
+/*
+* FONT COLORS
+*/
+.mot-Controls-Carousel__item_name_0 span {
+  color: var(--font-color-primary);
+}
+[data-qa="person-Card__headerName"] {
+  color: var(--font-color-primary);
+}
+.personCard-Contact__list [class^='personCard-Contact_'],
+.personCard-Contact__list .controls-text-default,
+.personCard-Contact__list .personCard-Contact__dataContact a {
+  color: var(--font-color-primary);
+}
+.ws-is-hover .personCard-Contact__columnsContainer .controls-ListView__item_highlightOnHover_default:hover,
+.ws-is-hover .controls-itemActionsV_style_default {
+  background-color: unset;
+}
+.ws-is-desktop-platform .person-PhoneCallLinkButton_state-main:hover {
+  color: var(--font-color-link-hover);
+}
+.person-Card__tabs {
+  display: var(--display-top-nav);
+}
+.controls-BreadCrumbsView {
+  display: var(--display-breadcrumbs);
+}
+/*
+ * PHOTO OUTLINE
+ */
+.person-Card_headerLogo .docview3-PhotoGallery,
+.person-Card_headerLogo .docview3-PhotoGallery__view,
+.person-Card_headerLogo .docview3-Preview {
+  overflow: visible;
+}
+.person-Card_headerLogo .docview3-Preview {
+  display: inline-block;
+  position: relative;
+}
+.person-Card_headerLogo .docview3-Preview:after {
+  content: '';
+  position: absolute;
+  inset: var(--photo-outline-inset);
+  background: var(--photo-outline-img);
+  background-position: center;
+  background-size: cover;
+}
+.person-Card_headerLogo .docview3-Preview__image {
+  border-radius: var(--photo-radius);
+}
+/*
+ * PROFILE BADGE
+ */
+.person-GeneralInfo__scroll .controls-Scroll-Container {
+  overflow: visible;
+}
+.employee-Card .mot-Controls-Carousel__PersonCardPromotions [name="swipeContainer"] {
+  pointer-events: none;
+}
+.employee-Card .mot-Controls-Carousel__PersonCardPromotions [name="swipeContainer"] [name^="carouselItem__"]:not(:first-child) {
+  display: none;
+}
+.employee-Card .mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item']:not(:first-child) {
+  display: none;
+}
+.employee-Card .controls-BlockLayout__block .controls-BlockLayout__block_style_1:not(:last-child) {
+  position: absolute;
+  right: -274px;
+  top: -98px;
+  background: unset;
+}
+.employee-Card .mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item'] {
+  background-color: var(--badge-bg-color);
+  height: 70px;
+  border-radius: 3px;
+  width: 268px;
+  padding: 0;
+}
+.employee-Card .mot-Controls-Carousel__item .mot-Controls-Carousel__item_name {
+  padding-right: 16px;
+  margin: 0;
+}
+.employee-Card .mot-Controls-Carousel__item .mot-Controls-Carousel__item_container {
+  display: flex;
+}
+.employee-Card .mot-Controls-Carousel__item .mot-Controls-Carousel__item_badge {
+  display: inline-block;
+  position: relative;
+  background: unset;
+  width: 54px;
+  height: 54px;
+}
+.employee-Card .mot-Controls-Carousel__item .mot-Controls-Carousel__item_badge::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--badge-img);
+  background-position: center;
+  background-size: cover;
+}
+.employee-Card .mot-Controls-Carousel__item .mot-Controls-Carousel__item_badge img {
+  display: none;
+}
+.person-Card__navigation {
+  visibility: var(--display-right-nav);
+}
+.person-Card__navigation {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  padding: 10px;
+  border-radius: 3px;
+  width: 268px;
+  margin-right: 12px;
+}
+.person-Card__navigation .NavigationPanels-SideMenu_Item_title {
+  color: var(--font-color-primary);
+  font-weight: 400;
+  font-size: 14px;
+}
+.person-Card__navigation .controls-GridView__itemV_marker {
+  display: none;
+}
+.person-Card__navigation .controls-Grid__row-cell__content {
+  padding: 0;
+  align-items: center;
+}
+.person-Card__navigation .controls-Grid__row-cell__content:before {
+  content: unset;
+}
+.ws-is-hover .controls-BaseControl_hover_enabled .controls-Grid__row_highlightOnHover_master:hover .controls-Grid__row-cell-background-hover-master .NavigationPanels-SideMenu_Item_title span,
+.ws-is-hover .controls-BaseControl_hover_enabled .controls-Grid__row_highlightOnHover_master:hover .controls-background-master .NavigationPanels-SideMenu_Item_title span {
+  text-decoration: underline;
+}
+/*
+ * CONTACT INFO
+ */
+.employee-Card .personCard-Contact__list {
+  display: var(--display-contact-info);
+}
+/*
+ * PROJECTS & WORKSITES
+ */
+.employee-Card .wall-Main {
+  display: var(--display-wall);
+}
+/*
+ * WALL
+ */
+[name="userContent"] .controls-BlockLayout .controls__block-layout-background {
+  display: var(--display-wall);
+}
+/* 
+ * BODY BACKGROUND
+ */
+body {
+  background-image: var(--bg-img) !important;
+}
+/*
+ *  ICON COLORS
+ */
+/*
+ * STACK BACKGROUND
+ */
+.employee-Card .controls-StackTemplate-content {
+  background: var(--stack-background);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.controls-StackTemplate {
+  width: 976px !important;
+}
+/*
+ * STACK SHADOW
+ */
+.controls-Popup__dialog-target-container {
+  box-shadow: var(--stack-shadow);
+}
+.controls-StackTemplate-shadow {
+  border-right: var(--border-thickness_stack) solid var(--stack-shadow);
+}
+/*
+* STACK PANEL
+*/
 :root {
   --gradient-right: rgba(248, 70, 180, 0.301);
   --gradient-left: rgba(9, 243, 99, 0.247);
@@ -14,6 +239,7 @@
   --stack-background: radial-gradient(farthest-side at bottom right, var(--gradient-right), transparent 500px),
         radial-gradient(farthest-corner at bottom left, var(--gradient-left), transparent 600px), var(--gradient-background);
   --font-color-link-hover: #e3e;
+  --display-right-nav: visible;
 }
 /* SPACING FOR HEADER */
 .employee-Card .controls-StackTemplate__top-area {
@@ -26,7 +252,7 @@
 /* RIGHT PANEL */
 .controls-StackTemplate__rightBorder_visible {
   border-color: var(--gradient-background);
-  border-left: 2px solid;
+  border-left: var(--border_width_stack-right_panel) solid;
 }
 .controls-StackTemplate__rightPanel {
   background: var(--gradient-background);

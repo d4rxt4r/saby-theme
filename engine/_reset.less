@@ -1,5 +1,6 @@
 // resetting styles
-
+// TODO:
+//  reset other tabs
 .employee-Card {
     .controls-StackTemplate__top-area {
         background: transparent;
@@ -19,6 +20,15 @@
         background: unset;
         padding-top: 0;
     }
+}
+
+.person-Card__navigation .controls-Grid__row-cell_selected-master.controls-background-master {
+    background: unset;
+}
+
+.ws-is-hover .controls-BaseControl_hover_enabled .controls-Grid__row_highlightOnHover_master:hover .controls-Grid__row-cell-background-hover-master,
+.ws-is-hover .controls-BaseControl_hover_enabled .controls-Grid__row_highlightOnHover_master:hover .controls-background-master {
+    background-color: unset;
 }
 
 /*

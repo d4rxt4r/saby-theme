@@ -1,6 +1,47 @@
 // right nav visibility
 .person-Card__navigation {
-    display: var(--display-right-nav);
+    visibility: var(--display-right-nav);
 }
 
-// TODO: style the nav
+.person-Card__navigation {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    border-radius: 3px;
+    width: 268px;
+    margin-right: 12px;
+
+
+
+    .NavigationPanels-SideMenu_Item_title {
+        color: var(--font-color-primary);
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .controls-GridView__itemV_marker {
+        display: none;
+    }
+
+    .controls-Grid__row-cell__content {
+        padding: 0;
+        align-items: center;
+
+        &:before {
+            content: unset;
+        }
+    }
+}
+
+
+.ws-is-hover .controls-BaseControl_hover_enabled .controls-Grid__row_highlightOnHover_master:hover .controls-Grid__row-cell-background-hover-master,
+.ws-is-hover .controls-BaseControl_hover_enabled .controls-Grid__row_highlightOnHover_master:hover .controls-background-master {
+    .NavigationPanels-SideMenu_Item_title span {
+        text-decoration: underline;
+    }
+}
+
+// TODO:
+//  define other styles
+//  make it `floating`
+//  

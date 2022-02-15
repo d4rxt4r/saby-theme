@@ -5,7 +5,7 @@
   --photo-outline-inset: -10px;
   --display-breadcrumbs: none;
   --display-top-nav: none;
-  --display-right-nav: none;
+  --display-right-nav: hidden;
   --display-wall: none;
   --display-contact-info: block;
   --display-projects: none;
@@ -90,6 +90,9 @@
 .person-GeneralInfo__scroll .controls-Scroll-Container {
   overflow: visible;
 }
+.employee-Card .mot-Controls-Carousel__PersonCardPromotions [name="swipeContainer"] {
+  pointer-events: none;
+}
 .employee-Card .mot-Controls-Carousel__PersonCardPromotions [name="swipeContainer"] [name^="carouselItem__"]:not(:first-child) {
   display: none;
 }
@@ -98,7 +101,7 @@
 }
 .employee-Card .controls-BlockLayout__block .controls-BlockLayout__block_style_1:not(:last-child) {
   position: absolute;
-  right: 6px;
+  right: -195px;
   top: -98px;
   background: unset;
 }
@@ -106,14 +109,17 @@
   background-color: var(--badge-bg-color);
   height: 70px;
   border-radius: 3px;
-  padding: 0 12px 0 6px;
+  padding: 0 12px 0 0;
 }
-.employee-Card .mot-Controls-Carousel__item .mot-Controls-Carousel__item_single {
-  pointer-events: none;
+.employee-Card .mot-Controls-Carousel__item .mot-Controls-Carousel__item_container {
+  display: flex;
 }
 .employee-Card .mot-Controls-Carousel__item .mot-Controls-Carousel__item_badge {
   display: inline-block;
   position: relative;
+  background: unset;
+  width: 54px;
+  height: 54px;
 }
 .employee-Card .mot-Controls-Carousel__item .mot-Controls-Carousel__item_badge::after {
   content: '';
@@ -127,7 +133,7 @@
   display: none;
 }
 .person-Card__navigation {
-  display: var(--display-right-nav);
+  visibility: var(--display-right-nav);
 }
 /*
  * CONTACT INFO
@@ -163,6 +169,9 @@ body {
   background: var(--stack-background);
   background-repeat: no-repeat;
   background-position: center;
+}
+.controls-StackTemplate {
+  width: 976px !important;
 }
 /*
  * STACK SHADOW

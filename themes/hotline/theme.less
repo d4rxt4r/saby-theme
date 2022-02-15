@@ -1,6 +1,6 @@
 /* inspired by https://steamcommunity.com/id/RetroGod1986/ */
 
-@import "../../engine/base.css";
+@import "../../engine/base";
 
 :root {
     --gradient-right: rgba(248, 70, 180, 0.301);
@@ -17,6 +17,7 @@
     --stack-background: radial-gradient(farthest-side at bottom right, var(--gradient-right), transparent 500px),
         radial-gradient(farthest-corner at bottom left, var(--gradient-left), transparent 600px), var(--gradient-background);
     --font-color-link-hover: #e3e;
+    --display-right-nav: visible;
 }
 
 /* SPACING FOR HEADER */
@@ -32,7 +33,7 @@
 /* RIGHT PANEL */
 .controls-StackTemplate__rightBorder_visible {
     border-color: var(--gradient-background);
-    border-left: 2px solid;
+    border-left: var(--border_width_stack-right_panel) solid;
 }
 
 .controls-StackTemplate__rightPanel {

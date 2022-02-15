@@ -50,6 +50,10 @@
 
     // hide other badges
     .mot-Controls-Carousel__PersonCardPromotions {
+        [name="swipeContainer"] {
+            pointer-events: none;
+        }
+
         [name="swipeContainer"] [name^="carouselItem__"]:not(:first-child) {
             display: none;
         }
@@ -61,7 +65,7 @@
 
     .controls-BlockLayout__block .controls-BlockLayout__block_style_1:not(:last-child) {
         position: absolute;
-        right: 6px;
+        right: -274px;
         top: -98px;
         background: unset;
     }
@@ -71,16 +75,25 @@
             background-color: var(--badge-bg-color);
             height: 70px;
             border-radius: 3px;
-            padding: 0 12px 0 6px;
+            width: 268px;
+            padding: 0;
         }
 
-        .mot-Controls-Carousel__item_single {
-            pointer-events: none;
+        .mot-Controls-Carousel__item_name {
+            padding-right: 16px;
+            margin: 0;
+        }
+
+        .mot-Controls-Carousel__item_container {
+            display: flex;
         }
 
         .mot-Controls-Carousel__item_badge {
             display: inline-block;
             position: relative;
+            background: unset;
+            width: 54px;
+            height: 54px;
 
             &::after {
                 content: '';
@@ -97,3 +110,7 @@
         }
     }
 }
+
+// TODO: 
+//  define `level` styles
+//  move name at the top
