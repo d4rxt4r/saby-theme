@@ -24,7 +24,10 @@
 .employee-Card .controls-background-default,
 .employee-Card .controls-BlockLayout,
 .employee-Card .controls-StackTemplate_backgroundColor,
-.employee-Card .controls-BlockLayout__block_style_1 {
+.employee-Card .controls-BlockLayout__block_style_1,
+.employee-Card .controls__block-layout-background,
+.employee-Card .wall-Header_sideDate,
+.employee-Card .wall-List {
   background: unset;
 }
 .employee-Card .person-GeneralInfo__widget {
@@ -85,6 +88,9 @@ body {
  */
 .person-GeneralInfo__scroll .controls-Scroll-Container {
   overflow: visible;
+}
+.employee-Card .mot-Controls-Carousel__PersonCardPromotions [name="swipeContainer"] [name^="carouselItem__"]:not(:first-child) {
+  display: none;
 }
 .employee-Card .mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item']:not(:first-child) {
   display: none;

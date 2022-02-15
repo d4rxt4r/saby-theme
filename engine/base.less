@@ -47,7 +47,10 @@
     .controls-background-default,
     .controls-BlockLayout,
     .controls-StackTemplate_backgroundColor,
-    .controls-BlockLayout__block_style_1 {
+    .controls-BlockLayout__block_style_1,
+    .controls__block-layout-background,
+    .wall-Header_sideDate,
+    .wall-List {
         background: unset;
     }
 
@@ -133,6 +136,12 @@ body {
 .employee-Card {
 
     // hide other badges
+    .mot-Controls-Carousel__PersonCardPromotions {
+        [name="swipeContainer"] [name^="carouselItem__"]:not(:first-child) {
+            display: none;
+        }
+    }
+
     .mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item']:not(:first-child) {
         display: none;
     }
