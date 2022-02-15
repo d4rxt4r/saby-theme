@@ -135,9 +135,10 @@ body {
 .mot-Controls-Carousel__item_name_0 span {
   color: var(--font-color-primary);
 }
-[data-qa="person-Card__headerName"] .controls-text-default,
+[data-qa="person-Card__headerName"] {
+  color: var(--font-color-primary);
+}
 .personCard-Contact__list .controls-text-default,
-[data-qa="person-Card__headerName"] .personCard-Contact__dataContact a,
 .personCard-Contact__list .personCard-Contact__dataContact a {
   color: var(--font-color-primary);
 }
