@@ -1,64 +1,9 @@
-:root {
-    // background image
-    --bg-img: url(./img/background.png);
-
-    // photo border radius
-    --photo-radius: 8px;
-    // photo outline image
-    --photo-outline-img: url(./img/outline.png);
-    // photo outline inset (t/l/b/r shorthand)
-    --photo-outline-inset: -10px;
-
-    // hidden breadcrumbs (block or none)
-    --display-breadcrumbs: none;
-    // hidden top navigation (block or none)
-    --display-top-nav: none;
-    // hidden right navigation (block or none)
-    --display-right-nav: none;
-
-    // badge background
-    --badge-bg-color: rgba(0, 0, 0, 0.3);
-    // badge img replacement
-    --badge-img: url(./img/badge.png);
-
-    // stack shadow
-    --stack-shadow: rgba(0, 0, 0, 0.3);
-    // stack background
-    --stack-background: #bbe9ff;
-
-    // primary font color
-    --font-color-primary: #fff;
-    // secondary font color
-    --font-color-secondary: #eee;
-    // link color
-    --font-color-link: #fff;
-    // link color hover
-    --font-color-link-hover: #fff;
-}
-
-/* 
- * CLEARING STYLES
- */
-.employee-Card {
-    .controls-StackTemplate__top-area {
-        background: transparent;
-    }
-
-    .controls-background-default,
-    .controls-BlockLayout,
-    .controls-StackTemplate_backgroundColor,
-    .controls-BlockLayout__block_style_1,
-    .controls__block-layout-background,
-    .wall-Header_sideDate,
-    .wall-List {
-        background: unset;
-    }
-
-    .person-GeneralInfo__widget {
-        background: unset;
-        padding-top: 0;
-    }
-}
+@import "_vars";
+@import "_reset";
+@import "_header";
+@import "_panel";
+@import "_info";
+@import "_wall";
 
 
 /* 
@@ -69,120 +14,17 @@ body {
 }
 
 /*
+ *  ICON COLORS
+ */
+// TODO
+
+/*
  * STACK BACKGROUND
  */
 .employee-Card .controls-StackTemplate-content {
     background: var(--stack-background);
     background-repeat: no-repeat;
     background-position: center;
-}
-
-/*
- * PHOTO OUTLINE
- */
-.person-Card_headerLogo {
-
-    .docview3-PhotoGallery,
-    .docview3-PhotoGallery__view,
-    .docview3-Preview {
-        overflow: visible;
-    }
-
-    .docview3-Preview {
-        display: inline-block;
-        position: relative;
-
-        &:after {
-            content: '';
-            position: absolute;
-            inset: var(--photo-outline-inset);
-            background: var(--photo-outline-img);
-            background-position: center;
-            background-size: cover;
-        }
-    }
-
-    .docview3-Preview__image {
-        border-radius: var(--photo-radius);
-    }
-}
-
-/*
- * HIDDEN NAVIGATION
- */
-
-// breadcrumbs
-.controls-BreadCrumbsView {
-    display: var(--display-breadcrumbs);
-}
-
-// right panel
-.person-Card__navigation {
-    display: var(--display-right-nav);
-}
-
-// top panel
-.person-Card__tabs {
-    display: var(--display-top-nav);
-}
-
-/*
- * PROFILE BADGE
- */
-.person-GeneralInfo__scroll .controls-Scroll-Container {
-    overflow: visible;
-}
-
-.employee-Card {
-
-    // hide other badges
-    .mot-Controls-Carousel__PersonCardPromotions {
-        [name="swipeContainer"] [name^="carouselItem__"]:not(:first-child) {
-            display: none;
-        }
-    }
-
-    .mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item']:not(:first-child) {
-        display: none;
-    }
-
-    .controls-BlockLayout__block .controls-BlockLayout__block_style_1:not(:last-child) {
-        position: absolute;
-        right: 6px;
-        top: -98px;
-        background: unset;
-    }
-
-    .mot-Controls-Carousel__item {
-        [data-qa^='mot-Controls-Carousel__item'] {
-            background-color: var(--badge-bg-color);
-            height: 70px;
-            border-radius: 3px;
-            padding: 0 12px 0 6px;
-        }
-
-        .mot-Controls-Carousel__item_single {
-            pointer-events: none;
-        }
-
-        .mot-Controls-Carousel__item_badge {
-            display: inline-block;
-            position: relative;
-
-            &::after {
-                content: '';
-                position: absolute;
-                inset: 0;
-                background: var(--badge-img);
-                background-position: center;
-                background-size: cover;
-            }
-
-            img {
-                display: none;
-            }
-        }
-    }
 }
 
 /*
@@ -196,39 +38,7 @@ body {
     border-right: var(--border-thickness_stack) solid var(--stack-shadow);
 }
 
-// TODO: style panel buttons, etc...
-/* STACK PANEL */
-
-// TODO: style all possible fonts
 /*
- * FONT COLORS
- */
-
-.mot-Controls-Carousel__item_name_0 span {
-    color: var(--font-color-primary);
-}
-
-// font color for person contacts
-[data-qa="person-Card__headerName"] {
-    color: var(--font-color-primary);
-}
-
-.personCard-Contact__list {
-
-    [class^='personCard-Contact_'],
-    .controls-text-default,
-    .personCard-Contact__dataContact a {
-        color: var(--font-color-primary);
-    }
-}
-
-// unset hover effects
-.ws-is-hover .personCard-Contact__columnsContainer .controls-ListView__item_highlightOnHover_default:hover,
-.ws-is-hover .controls-itemActionsV_style_default {
-    background-color: unset;
-}
-
-// links
-.ws-is-desktop-platform .person-PhoneCallLinkButton_state-main:hover {
-    color: var(--font-color-link-hover);
-}
+* STACK PANEL
+*/
+// TODO: style panel buttons, etc...

@@ -6,6 +6,9 @@
   --display-breadcrumbs: none;
   --display-top-nav: none;
   --display-right-nav: none;
+  --display-wall: none;
+  --display-contact-info: block;
+  --display-projects: none;
   --badge-bg-color: rgba(0, 0, 0, 0.3);
   --badge-img: url(./img/badge.png);
   --stack-shadow: rgba(0, 0, 0, 0.3);
@@ -15,9 +18,6 @@
   --font-color-link: #fff;
   --font-color-link-hover: #fff;
 }
-/* 
- * CLEARING STYLES
- */
 .employee-Card .controls-StackTemplate__top-area {
   background: transparent;
 }
@@ -34,19 +34,32 @@
   background: unset;
   padding-top: 0;
 }
-/* 
- * BODY BACKGROUND
- */
-body {
-  background-image: var(--bg-img) !important;
-}
 /*
- * STACK BACKGROUND
- */
-.employee-Card .controls-StackTemplate-content {
-  background: var(--stack-background);
-  background-repeat: no-repeat;
-  background-position: center;
+* FONT COLORS
+*/
+.mot-Controls-Carousel__item_name_0 span {
+  color: var(--font-color-primary);
+}
+[data-qa="person-Card__headerName"] {
+  color: var(--font-color-primary);
+}
+.personCard-Contact__list [class^='personCard-Contact_'],
+.personCard-Contact__list .controls-text-default,
+.personCard-Contact__list .personCard-Contact__dataContact a {
+  color: var(--font-color-primary);
+}
+.ws-is-hover .personCard-Contact__columnsContainer .controls-ListView__item_highlightOnHover_default:hover,
+.ws-is-hover .controls-itemActionsV_style_default {
+  background-color: unset;
+}
+.ws-is-desktop-platform .person-PhoneCallLinkButton_state-main:hover {
+  color: var(--font-color-link-hover);
+}
+.person-Card__tabs {
+  display: var(--display-top-nav);
+}
+.controls-BreadCrumbsView {
+  display: var(--display-breadcrumbs);
 }
 /*
  * PHOTO OUTLINE
@@ -70,18 +83,6 @@ body {
 }
 .person-Card_headerLogo .docview3-Preview__image {
   border-radius: var(--photo-radius);
-}
-/*
- * HIDDEN NAVIGATION
- */
-.controls-BreadCrumbsView {
-  display: var(--display-breadcrumbs);
-}
-.person-Card__navigation {
-  display: var(--display-right-nav);
-}
-.person-Card__tabs {
-  display: var(--display-top-nav);
 }
 /*
  * PROFILE BADGE
@@ -125,6 +126,44 @@ body {
 .employee-Card .mot-Controls-Carousel__item .mot-Controls-Carousel__item_badge img {
   display: none;
 }
+.person-Card__navigation {
+  display: var(--display-right-nav);
+}
+/*
+ * CONTACT INFO
+ */
+.employee-Card .personCard-Contact__list {
+  display: var(--display-contact-info);
+}
+/*
+ * PROJECTS & WORKSITES
+ */
+.employee-Card .wall-Main {
+  display: var(--display-wall);
+}
+/*
+ * WALL
+ */
+[name="userContent"] .controls-BlockLayout .controls__block-layout-background {
+  display: var(--display-wall);
+}
+/* 
+ * BODY BACKGROUND
+ */
+body {
+  background-image: var(--bg-img) !important;
+}
+/*
+ *  ICON COLORS
+ */
+/*
+ * STACK BACKGROUND
+ */
+.employee-Card .controls-StackTemplate-content {
+  background: var(--stack-background);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 /*
  * STACK SHADOW
  */
@@ -134,25 +173,6 @@ body {
 .controls-StackTemplate-shadow {
   border-right: var(--border-thickness_stack) solid var(--stack-shadow);
 }
-/* STACK PANEL */
 /*
- * FONT COLORS
- */
-.mot-Controls-Carousel__item_name_0 span {
-  color: var(--font-color-primary);
-}
-[data-qa="person-Card__headerName"] {
-  color: var(--font-color-primary);
-}
-.personCard-Contact__list [class^='personCard-Contact_'],
-.personCard-Contact__list .controls-text-default,
-.personCard-Contact__list .personCard-Contact__dataContact a {
-  color: var(--font-color-primary);
-}
-.ws-is-hover .personCard-Contact__columnsContainer .controls-ListView__item_highlightOnHover_default:hover,
-.ws-is-hover .controls-itemActionsV_style_default {
-  background-color: unset;
-}
-.ws-is-desktop-platform .person-PhoneCallLinkButton_state-main:hover {
-  color: var(--font-color-link-hover);
-}
+* STACK PANEL
+*/

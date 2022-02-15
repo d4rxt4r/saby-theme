@@ -1,0 +1,56 @@
+// resetting styles
+
+.employee-Card {
+    .controls-StackTemplate__top-area {
+        background: transparent;
+    }
+
+    .controls-background-default,
+    .controls-BlockLayout,
+    .controls-StackTemplate_backgroundColor,
+    .controls-BlockLayout__block_style_1,
+    .controls__block-layout-background,
+    .wall-Header_sideDate,
+    .wall-List {
+        background: unset;
+    }
+
+    .person-GeneralInfo__widget {
+        background: unset;
+        padding-top: 0;
+    }
+}
+
+/*
+* FONT COLORS
+*/
+// TODO: style all possible fonts
+
+.mot-Controls-Carousel__item_name_0 span {
+    color: var(--font-color-primary);
+}
+
+// font color for person contacts
+[data-qa="person-Card__headerName"] {
+    color: var(--font-color-primary);
+}
+
+.personCard-Contact__list {
+
+    [class^='personCard-Contact_'],
+    .controls-text-default,
+    .personCard-Contact__dataContact a {
+        color: var(--font-color-primary);
+    }
+}
+
+// unset hover effects
+.ws-is-hover .personCard-Contact__columnsContainer .controls-ListView__item_highlightOnHover_default:hover,
+.ws-is-hover .controls-itemActionsV_style_default {
+    background-color: unset;
+}
+
+// links
+.ws-is-desktop-platform .person-PhoneCallLinkButton_state-main:hover {
+    color: var(--font-color-link-hover);
+}

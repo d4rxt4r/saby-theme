@@ -1,0 +1,99 @@
+// tabs visibility
+.person-Card__tabs {
+    display: var(--display-top-nav);
+}
+
+// breadcrumbs visibility
+.controls-BreadCrumbsView {
+    display: var(--display-breadcrumbs);
+}
+
+
+/*
+ * PHOTO OUTLINE
+ */
+.person-Card_headerLogo {
+
+    .docview3-PhotoGallery,
+    .docview3-PhotoGallery__view,
+    .docview3-Preview {
+        overflow: visible;
+    }
+
+    .docview3-Preview {
+        display: inline-block;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            inset: var(--photo-outline-inset);
+            background: var(--photo-outline-img);
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    .docview3-Preview__image {
+        border-radius: var(--photo-radius);
+    }
+}
+
+/*
+ * PROFILE BADGE
+ */
+.person-GeneralInfo__scroll .controls-Scroll-Container {
+    overflow: visible;
+}
+
+.employee-Card {
+
+    // hide other badges
+    .mot-Controls-Carousel__PersonCardPromotions {
+        [name="swipeContainer"] [name^="carouselItem__"]:not(:first-child) {
+            display: none;
+        }
+    }
+
+    .mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item']:not(:first-child) {
+        display: none;
+    }
+
+    .controls-BlockLayout__block .controls-BlockLayout__block_style_1:not(:last-child) {
+        position: absolute;
+        right: 6px;
+        top: -98px;
+        background: unset;
+    }
+
+    .mot-Controls-Carousel__item {
+        [data-qa^='mot-Controls-Carousel__item'] {
+            background-color: var(--badge-bg-color);
+            height: 70px;
+            border-radius: 3px;
+            padding: 0 12px 0 6px;
+        }
+
+        .mot-Controls-Carousel__item_single {
+            pointer-events: none;
+        }
+
+        .mot-Controls-Carousel__item_badge {
+            display: inline-block;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: var(--badge-img);
+                background-position: center;
+                background-size: cover;
+            }
+
+            img {
+                display: none;
+            }
+        }
+    }
+}
