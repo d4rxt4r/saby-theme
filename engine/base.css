@@ -138,6 +138,7 @@ body {
 [data-qa="person-Card__headerName"] {
   color: var(--font-color-primary);
 }
+.personCard-Contact__list [class^='personCard-Contact_'],
 .personCard-Contact__list .controls-text-default,
 .personCard-Contact__list .personCard-Contact__dataContact a {
   color: var(--font-color-primary);
