@@ -7,13 +7,13 @@
   --btn-background: #5a285c;
   --btn-background-hover: #643266;
   --btn-outline: rgba(140, 90, 142);
-  --bg-img: url(./img/bg.png);
-  --photo-outline-img: url(./img/outline.png);
-  --badge-img: url(./img/badge.png);
+  --bg-img: url(/saby-theme/themes/hotline/img/bg.jpg);
+  --photo-outline-img: url(/saby-theme/themes/hotline/img/outline.png);
+  --badge-img: url(/saby-theme/themes/hotline/img/badge.png);
   --stack-shadow: rgba(248, 70, 180, 0.301);
   --stack-background: var(--gradient-background), radial-gradient(farthest-side at bottom right, var(--gradient-right), transparent 500px),
         radial-gradient(farthest-corner at bottom left, var(--gradient-left), transparent 600px);
-  --font-color-link: #e3e;
+  --font-color-link-hover: #e3e;
 }
 /* SPACING FOR HEADER */
 .employee-Card .controls-StackTemplate__top-area {

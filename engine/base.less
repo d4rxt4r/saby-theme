@@ -11,9 +11,9 @@
 
     // hidden breadcrumbs (block or none)
     --display-breadcrumbs: none;
-    // hidden top navigation
+    // hidden top navigation (block or none)
     --display-top-nav: none;
-    // hidden right navigation
+    // hidden right navigation (block or none)
     --display-right-nav: none;
 
     // badge background
@@ -32,9 +32,13 @@
     --font-color-secondary: #eee;
     // link color
     --font-color-link: #fff;
+    // link color hover
+    --font-color-link-hover: #fff;
 }
 
-/* CLEARING STYLES */
+/* 
+ * CLEARING STYLES
+ */
 .employee-Card {
     .controls-StackTemplate__top-area {
         background: transparent;
@@ -54,19 +58,25 @@
 }
 
 
-/* BACKGROUND */
+/* 
+ * BODY BACKGROUND
+ */
 body {
     background-image: var(--bg-img) !important;
 }
 
-/* STACK BACKGROUND */
+/*
+ * STACK BACKGROUND
+ */
 .employee-Card .controls-StackTemplate-content {
     background: var(--stack-background);
     background-repeat: no-repeat;
     background-position: center;
 }
 
-/* PHOTO OUTLINE */
+/*
+ * PHOTO OUTLINE
+ */
 .person-Card_headerLogo {
 
     .docview3-PhotoGallery,
@@ -88,14 +98,21 @@ body {
             background-size: cover;
         }
     }
+
+    .docview3-Preview__image {
+        border-radius: var(--photo-radius);
+    }
 }
 
-/* HIDDEN BREADCRUMBS */
+/*
+ * HIDDEN NAVIGATION
+ */
+
+// breadcrumbs
 .controls-BreadCrumbsView {
     display: var(--display-breadcrumbs);
 }
 
-/* HIDDEN NAVIGATION */
 // right panel
 .person-Card__navigation {
     display: var(--display-right-nav);
@@ -106,7 +123,9 @@ body {
     display: var(--display-top-nav);
 }
 
-/* PROFILE BADGE */
+/*
+ * PROFILE BADGE
+ */
 .person-GeneralInfo__scroll .controls-Scroll-Container {
     overflow: visible;
 }
@@ -157,7 +176,9 @@ body {
     }
 }
 
-/* STACK SHADOW */
+/*
+ * STACK SHADOW
+ */
 .controls-Popup__dialog-target-container {
     box-shadow: var(--stack-shadow);
 }
@@ -166,11 +187,13 @@ body {
     border-right: var(--border-thickness_stack) solid var(--stack-shadow);
 }
 
-/* STACK PANEL */
 // TODO: style panel buttons, etc...
+/* STACK PANEL */
 
-/* FONT COLORS */
 // TODO: style all possible fonts
+/*
+ * FONT COLORS
+ */
 
 .mot-Controls-Carousel__item_name_0 span {
     color: var(--font-color-primary);
@@ -192,6 +215,7 @@ body {
     background-color: unset;
 }
 
+// links
 .ws-is-desktop-platform .person-PhoneCallLinkButton_state-main:hover {
-    color: var(--font-color-link);
+    color: var(--font-color-link-hover);
 }

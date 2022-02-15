@@ -13,8 +13,11 @@
   --font-color-primary: #fff;
   --font-color-secondary: #eee;
   --font-color-link: #fff;
+  --font-color-link-hover: #fff;
 }
-/* CLEARING STYLES */
+/* 
+ * CLEARING STYLES
+ */
 .employee-Card .controls-StackTemplate__top-area {
   background: transparent;
 }
@@ -28,17 +31,23 @@
   background: unset;
   padding-top: 0;
 }
-/* BACKGROUND */
+/* 
+ * BODY BACKGROUND
+ */
 body {
   background-image: var(--bg-img) !important;
 }
-/* STACK BACKGROUND */
+/*
+ * STACK BACKGROUND
+ */
 .employee-Card .controls-StackTemplate-content {
   background: var(--stack-background);
   background-repeat: no-repeat;
   background-position: center;
 }
-/* PHOTO OUTLINE */
+/*
+ * PHOTO OUTLINE
+ */
 .person-Card_headerLogo .docview3-PhotoGallery,
 .person-Card_headerLogo .docview3-PhotoGallery__view,
 .person-Card_headerLogo .docview3-Preview {
@@ -56,18 +65,24 @@ body {
   background-position: center;
   background-size: cover;
 }
-/* HIDDEN BREADCRUMBS */
+.person-Card_headerLogo .docview3-Preview__image {
+  border-radius: var(--photo-radius);
+}
+/*
+ * HIDDEN NAVIGATION
+ */
 .controls-BreadCrumbsView {
   display: var(--display-breadcrumbs);
 }
-/* HIDDEN NAVIGATION */
 .person-Card__navigation {
   display: var(--display-right-nav);
 }
 .person-Card__tabs {
   display: var(--display-top-nav);
 }
-/* PROFILE BADGE */
+/*
+ * PROFILE BADGE
+ */
 .person-GeneralInfo__scroll .controls-Scroll-Container {
   overflow: visible;
 }
@@ -104,7 +119,9 @@ body {
 .employee-Card .mot-Controls-Carousel__item .mot-Controls-Carousel__item_badge img {
   display: none;
 }
-/* STACK SHADOW */
+/*
+ * STACK SHADOW
+ */
 .controls-Popup__dialog-target-container {
   box-shadow: var(--stack-shadow);
 }
@@ -112,7 +129,9 @@ body {
   border-right: var(--border-thickness_stack) solid var(--stack-shadow);
 }
 /* STACK PANEL */
-/* FONT COLORS */
+/*
+ * FONT COLORS
+ */
 .mot-Controls-Carousel__item_name_0 span {
   color: var(--font-color-primary);
 }
@@ -127,5 +146,5 @@ body {
   background-color: unset;
 }
 .ws-is-desktop-platform .person-PhoneCallLinkButton_state-main:hover {
-  color: var(--font-color-link);
+  color: var(--font-color-link-hover);
 }
