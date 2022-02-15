@@ -1,0 +1,53 @@
+/* inspired by https://steamcommunity.com/id/RetroGod1986/ */
+
+@import url("../../engine/base.css");
+
+:root {
+    --gradient-right: rgba(248, 70, 180, 0.301);
+    --gradient-left: rgba(9, 243, 99, 0.247);
+    --gradient-background: rgba(46, 13, 36, 0.93);
+    --btn-background: rgb(90, 40, 92);
+    --btn-background-hover: rgb(100, 50, 102);
+    --btn-outline: rgba(140, 90, 142);
+
+    --bg-img: url(./img/bg.png);
+    --photo-outline-img: url(./img/outline.png);
+    --badge-img: url(./img/badge.png);
+    --stack-shadow: rgba(248, 70, 180, 0.301);
+    --stack-background: var(--gradient-background), radial-gradient(farthest-side at bottom right, var(--gradient-right), transparent 500px),
+        radial-gradient(farthest-corner at bottom left, var(--gradient-left), transparent 600px);
+    --font-color-link: #e3e;
+}
+
+/* SPACING FOR HEADER */
+.employee-Card .controls-StackTemplate__top-area {
+    padding-top: var(--offset_l);
+    padding-bottom: 42px;
+}
+
+.employee-Card__header_footer {
+    margin-top: var(--offset_3xl);
+}
+
+/* RIGHT PANEL */
+.controls-StackTemplate__rightBorder_visible {
+    border-color: var(--gradient-background);
+    border-left: 2px solid;
+}
+
+.controls-StackTemplate__rightPanel {
+    background: var(--gradient-background);
+}
+
+.employee-Card .sabyPage-widgets__informersWrapper-shadow::after {
+    background: unset;
+}
+
+.informers-InformersBar-informer-header_container {
+    border: 1px solid var(--btn-background);
+    background-color: var(--btn-outline);
+}
+
+.ws-is-hover .informers-InformersBar-informer-header_container:hover {
+    background-color: var(--btn-background-hover);
+}

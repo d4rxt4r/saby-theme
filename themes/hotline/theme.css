@@ -1,205 +1,43 @@
+/* inspired by https://steamcommunity.com/id/RetroGod1986/ */
+@import url("../../engine/base.css");
 :root {
-    --gradient-right: rgba(248, 70, 180, 0.301);
-    --gradient-left: rgba(9, 243, 99, 0.247);
-    --gradient-background: rgba(46, 13, 36, 0.93);
-    --gradient-background-right: rgba(70, 227, 248, 0);
-    --gradient-background-left: rgba(239, 243, 9, 0.13);
-    --color-showcase-header: rgba(57, 24, 61, 0.93);
-    --gradient-showcase-header-left: rgba(20, 60, 68, 0.93);
-    --btn-background: rgb(90, 40, 92);
-    --btn-background-hover: rgb(100, 50, 102);
-    --btn-outline: rgba(140, 90, 142);
+  --gradient-right: rgba(248, 70, 180, 0.301);
+  --gradient-left: rgba(9, 243, 99, 0.247);
+  --gradient-background: rgba(46, 13, 36, 0.93);
+  --btn-background: #5a285c;
+  --btn-background-hover: #643266;
+  --btn-outline: rgba(140, 90, 142);
+  --bg-img: url(./img/bg.png);
+  --photo-outline-img: url(./img/outline.png);
+  --badge-img: url(./img/badge.png);
+  --stack-shadow: rgba(248, 70, 180, 0.301);
+  --stack-background: var(--gradient-background), radial-gradient(farthest-side at bottom right, var(--gradient-right), transparent 500px),
+        radial-gradient(farthest-corner at bottom left, var(--gradient-left), transparent 600px);
+  --font-color-link: #e3e;
 }
-
-/* BACKGROUND */
-body {
-    background-image: url(./img/bg.jpg) !important;
-}
-
-/* PHOTO OUTLINE */
-.person-Card_headerLogo .docview3-PhotoGallery,
-.person-Card_headerLogo .docview3-PhotoGallery__view,
-.person-Card_headerLogo .docview3-Preview {
-    overflow: visible;
-}
-
-.person-Card_headerLogo .docview3-Preview {
-    display: inline-block;
-    position: relative;
-}
-
-.person-Card_headerLogo .docview3-Preview::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    bottom: -10px;
-    left: -10px;
-    background: url(./img/outline.png);
-    background-position: center;
-    background-size: cover;
-}
-
-/* BADGE IMG REPLACEMENT */
-.mot-Controls-Carousel__item_badge {
-    display: inline-block;
-    position: relative;
-}
-
-.mot-Controls-Carousel__item_badge::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: url(./img/badge.png);
-    background-position: center;
-    background-size: cover;
-}
-
-.mot-Controls-Carousel__item_badge img {
-    display: none;
-}
-
-/* HIDDEN BREADCRUMBS */
-.controls-BreadCrumbsView {
-    display: none;
-}
-
-/* HIDDEN NAVIGATION */
-.person-Card__navigation {
-    display: none;
-}
-
-.person-Card__tabs {
-    display: none;
-}
-
 /* SPACING FOR HEADER */
 .employee-Card .controls-StackTemplate__top-area {
-    padding-top: var(--offset_l);
-    padding-bottom: 42px;
+  padding-top: var(--offset_l);
+  padding-bottom: 42px;
 }
-
 .employee-Card__header_footer {
-    margin-top: var(--offset_3xl);
+  margin-top: var(--offset_3xl);
 }
-
-/* PROFILE BADGE */
-.person-GeneralInfo__scroll .controls-Scroll-Container {
-    overflow: visible;
-}
-
-.mot-Controls-Carousel__item_single {
-    pointer-events: none;
-}
-
-.employee-Card .controls-BlockLayout__block .controls-BlockLayout__block_style_1:not(:last-child) {
-    position: absolute;
-    right: 6px;
-    top: -98px;
-    background: unset;
-}
-
-.employee-Card .mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item'] {
-    background-color: rgba(0, 0, 0, 0.3);
-    height: 70px;
-    border-radius: 3px;
-    padding: 0 12px 0 6px;
-}
-
-.employee-Card .mot-Controls-Carousel__item .mot-Controls-Carousel__item_name_0 span {
-    color: #fff;
-    /* font-weight: 600; */
-}
-
-/* HIDE OTHER BADGES */
-.employee-Card .mot-Controls-Carousel__item [data-qa^='mot-Controls-Carousel__item']:not(:first-child) {
-    display: none;
-}
-
-/* CARD BG GRADIENT */
-.employee-Card .controls-StackTemplate-content {
-    background: radial-gradient(farthest-side at bottom right, var(--gradient-right), transparent 500px),
-        radial-gradient(farthest-corner at bottom left, var(--gradient-left), transparent 600px);
-    background-color: var(--gradient-background);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* CARD SHADOW */
-.controls-Popup__dialog-target-container {
-    box-shadow: var(--gradient-right);
-}
-
-.controls-StackTemplate-shadow {
-    border-right: var(--border-thickness_stack) solid var(--gradient-background);
-}
-
-/* CLEARING STYLES */
-.person-GeneralInfo__widget {
-    background: unset;
-    padding-top: 0;
-}
-
-.employee-Card .controls-StackTemplate__top-area {
-    background: transparent;
-}
-
-.employee-Card .controls-background-default,
-.employee-Card .controls-BlockLayout,
-.employee-Card .controls-StackTemplate_backgroundColor,
-.employee-Card .controls-BlockLayout__block_style_1 {
-    background: unset;
-}
-
-
-/*  INVERT COLORS */
-[data-qa="person-Card__headerName"],
-.personCard-Contact__list [class^='personCard-Contact_'],
-.personCard-Contact__list .controls-text-default,
-.personCard-Contact__list .personCard-Contact__dataContact a {
-    color: #fff
-}
-
-.ws-is-hover .personCard-Contact__columnsContainer .controls-ListView__item_highlightOnHover_default:hover,
-.ws-is-hover .controls-itemActionsV_style_default {
-    background-color: unset;
-}
-
-.ws-is-desktop-platform .person-PhoneCallLinkButton_state-main:hover {
-    color: #e3e;
-}
-
-/* END INVERT COLORS */
-
 /* RIGHT PANEL */
 .controls-StackTemplate__rightBorder_visible {
-    border-color: var(--gradient-background);
-    border-left: 2px solid;
+  border-color: var(--gradient-background);
+  border-left: 2px solid;
 }
-
 .controls-StackTemplate__rightPanel {
-    background: var(--gradient-background);
+  background: var(--gradient-background);
 }
-
 .employee-Card .sabyPage-widgets__informersWrapper-shadow::after {
-    background: unset;
+  background: unset;
 }
-
 .informers-InformersBar-informer-header_container {
-    border: 1px solid var(--btn-background);
-    background-color: var(--btn-outline);
-} 
-
-.ws-is-hover .informers-InformersBar-informer-header_container:hover {
-    background-color: var(--btn-background-hover);
+  border: 1px solid var(--btn-background);
+  background-color: var(--btn-outline);
 }
-
-
-/* TODO
-
-add some graphics idk
-
-*/
+.ws-is-hover .informers-InformersBar-informer-header_container:hover {
+  background-color: var(--btn-background-hover);
+}
