@@ -13,7 +13,7 @@
 
 /* BACKGROUND */
 body {
-    background-image: url(https://d4rxt4r.github.io/saby-theme/bg.jpg) !important;
+    background-image: url(./img/bg.jpg) !important;
 }
 
 /* PHOTO OUTLINE */
@@ -35,7 +35,7 @@ body {
     right: -10px;
     bottom: -10px;
     left: -10px;
-    background: url(https://d4rxt4r.github.io/saby-theme/outline.png);
+    background: url(./img/outline.png);
     background-position: center;
     background-size: cover;
 }
@@ -53,7 +53,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url(https://d4rxt4r.github.io/saby-theme/badge.png);
+    background: url(./img/badge.png);
     background-position: center;
     background-size: cover;
 }
@@ -95,7 +95,7 @@ body {
     pointer-events: none;
 }
 
-.employee-Card .controls-BlockLayout__block .controls-BlockLayout__block_style_1:first-child {
+.employee-Card .controls-BlockLayout__block .controls-BlockLayout__block_style_1:not(:last-child) {
     position: absolute;
     right: 6px;
     top: -98px;
