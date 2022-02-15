@@ -1,14 +1,14 @@
 :root {
-    --gradient-right: rgba(248, 70, 180, 0.301);
-    --gradient-left: rgba(9, 243, 99, 0.247);
-    --gradient-background: rgba(46, 13, 36, 0.93);
-    --gradient-background-right: rgba(70, 227, 248, 0);
-    --gradient-background-left: rgba(239, 243, 9, 0.13);
-    --color-showcase-header: rgba(57, 24, 61, 0.93);
-    --gradient-showcase-header-left: rgba(20, 60, 68, 0.93);
-    --btn-background: rgb(90, 40, 92);
-    --btn-background-hover: rgb(100, 50, 102);
-    --btn-outline: rgba(140, 90, 142);
+    --gradient-right: rgba(252, 197, 16, 0.301);
+    --gradient-left: rgba(9, 243, 153, 0.247);
+    --gradient-background: rgba(51, 27, 16, 0.93);
+    --gradient-background-right: rgba(252, 197, 16, 0);
+    --gradient-background-left: rgba(48, 243, 9, 0.13);
+    --color-showcase-header: rgba(70, 53, 31, 0.93);
+    --gradient-showcase-header-left: rgba(33, 78, 76, 0.93);
+    --btn-background: rgb(95, 76, 39);
+    --btn-background-hover: rgb(105, 86, 49);
+    --btn-outline: rgb(145, 126, 89);
 }
 
 /* BACKGROUND */
